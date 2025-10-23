@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수학 자료 수집기</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-calculator"></i> 수학 자료 수집기</h1>
+        <p>수학 영화, 드라마, 유튜브 채널, 커뮤니티를 한 곳에서 관리하세요</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- 키워드 관리 섹션 -->
+            <section class="keyword-section">
+                <h2><i class="fas fa-tags"></i> 키워드 관리</h2>
+                <div class="upload-area" id="uploadArea">
+                    <i class="fas fa-file-excel"></i>
+                    <p>엑셀 파일을 드래그하거나 클릭하여 업로드하세요</p>
+                    <input type="file" id="excelFile" accept=".xlsx,.xls,.csv" hidden>
+                </div>
+                <div class="keyword-list" id="keywordList">
+                    <!-- 키워드들이 여기에 표시됩니다 -->
+                </div>
+            </section>
+
+            <!-- 유튜브 채널 수집 섹션 -->
+            <section class="youtube-section">
+                <h2><i class="fab fa-youtube"></i> 유튜브 채널 수집</h2>
+                <div class="search-box">
+                    <input type="text" id="youtubeSearch" placeholder="수학 관련 키워드로 검색...">
+                    <button id="searchYoutube"><i class="fas fa-search"></i> 검색</button>
+                </div>
+                <div class="results" id="youtubeResults">
+                    <!-- 검색 결과가 여기에 표시됩니다 -->
+                </div>
+            </section>
+
+            <!-- 커뮤니티 수집 섹션 -->
+            <section class="community-section">
+                <h2><i class="fas fa-users"></i> 수학 커뮤니티 수집</h2>
+                <div class="search-box">
+                    <input type="text" id="communitySearch" placeholder="수학 커뮤니티 검색...">
+                    <button id="searchCommunity"><i class="fas fa-search"></i> 검색</button>
+                </div>
+                <div class="results" id="communityResults">
+                    <!-- 검색 결과가 여기에 표시됩니다 -->
+                </div>
+            </section>
+
+            <!-- 수집된 자료 관리 섹션 -->
+            <section class="collection-section">
+                <h2><i class="fas fa-bookmark"></i> 수집된 자료</h2>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="youtube">유튜브 채널</button>
+                    <button class="tab-btn" data-tab="community">커뮤니티</button>
+                    <button class="tab-btn" data-tab="media">영화/드라마</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-panel active" id="youtube-panel">
+                        <div class="collection-list" id="youtubeCollection">
+                            <!-- 수집된 유튜브 채널들이 여기에 표시됩니다 -->
+                        </div>
+                    </div>
+                    <div class="tab-panel" id="community-panel">
+                        <div class="collection-list" id="communityCollection">
+                            <!-- 수집된 커뮤니티들이 여기에 표시됩니다 -->
+                        </div>
+                    </div>
+                    <div class="tab-panel" id="media-panel">
+                        <div class="collection-list" id="mediaCollection">
+                            <!-- 수집된 영화/드라마가 여기에 표시됩니다 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 수학 자료 수집기. 모든 자료는 교육 목적으로만 사용됩니다.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
